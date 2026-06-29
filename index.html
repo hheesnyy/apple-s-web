@@ -17,18 +17,15 @@
         
         <p>pick today's mood</p>
 
-        <select id="mood">
+      <div class="mood-buttons">
 
-            <option>海</option>
-            <option>山</option>
-            <option>city walk</option>
-            <option>solo trip</option>
+    <button onclick="showMood('海')">🌊 Ocean</button>
+    <button onclick="showMood('山')">⛰ Mountain</button>
+    <button onclick="showMood('city walk')">🚶 City Walk</button>
+    <button onclick="showMood('coffee date')">☕ Coffee Date</button>
+    <button onclick="showMood('nights')">🌙 Nights</button>
 
-        </select>
-
-        <button onclick="showMood()">
-            Find My Vibe
-        </button>
+</div>
 
         <div id="result"></div>
 
