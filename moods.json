@@ -1,29 +1,47 @@
 [
-    {
-        "mood":"海",
-        "place":"假日之森",
-        "activity":"看海發呆",
-        "song":"Space Song"
-    },
-    
-    {
-        "mood":"海",
-        "place":"外木山",
-        "activity":"散步",
-        "song":"Sunsetz"
-    },
+  {"mood":"solo trip","area":"北","region":"新北平溪","place":"嶺腳瀑布","activity":""},
+  {"mood":"solo trip","area":"東","region":"台東長濱","place":"分手巧克力","activity":""},
+  {"mood":"solo trip","area":"北","region":"臺北北投","place":"北投站","activity":"北投公園 泡湯"},
 
-    {
-        "mood":"山",
-        "place":"侯硐貓村",
-        "activity":"散步",
-        "song":"Holocene"
-    },
+  {"mood":"nights","area":"北","region":"臺北木柵","place":"好脾氣 Temper","activity":""},
+  {"mood":"nights","area":"北","region":"臺北古亭","place":"Sugarman","activity":""},
+  {"mood":"nights","area":"北","region":"臺北忠孝敦化","place":"Sofa Sofar","activity":""},
+  {"mood":"nights","area":"北","region":"臺北大安","place":"Jia Jia Jiou 關東煮","activity":""},
 
-    {
-        "mood":"山",
-        "place":"坪頂古圳",
-        "activity":"健行",
-        "song":"Bloom"
-    }
+  {"mood":"coffee date","area":"北","region":"臺北中山","place":"北風社","activity":""},
+  {"mood":"coffee date","area":"北","region":"新北平溪","place":"羊水咖啡","activity":""},
+  {"mood":"coffee date","area":"北","region":"臺北信義安和","place":"James House","activity":""},
+  {"mood":"coffee date","area":"北","region":"臺北大稻埕","place":"初二咖啡","activity":""},
+  {"mood":"coffee date","area":"北","region":"臺北古亭","place":"坪庵","activity":""},
+  {"mood":"coffee date","area":"南","region":"台南","place":"Hitoki","activity":""},
+  {"mood":"coffee date","area":"南","region":"台南","place":"黑早咖啡","activity":""},
+  {"mood":"coffee date","area":"北","region":"臺北中山國小","place":"獅子餐桌","activity":"開心果鬆餅"},
+  {"mood":"coffee date","area":"中","region":"苗栗頭份","place":"果宅","activity":"早午餐"},
+
+  {"mood":"city walk","area":"北","region":"臺北信義安和","place":"信義路四段","activity":""},
+  {"mood":"city walk","area":"北","region":"臺北東門","place":"永康街","activity":"肉桂樹"},
+  {"mood":"city walk","area":"北","region":"臺北古亭","place":"羅斯福二段巷弄","activity":""},
+  {"mood":"city walk","area":"北","region":"臺北大稻埕","place":"大橋頭站","activity":""},
+
+  {"mood":"picnic","area":"北","region":"臺北南港","place":"南港公園","activity":""},
+
+  {"mood":"ocean","area":"中","region":"苗栗竹南","place":"假日之森浪花村","activity":""},
+  {"mood":"ocean","area":"北","region":"新北石門","place":"路邊咖啡","activity":""},
+  {"mood":"ocean","area":"北","region":"基隆","place":"外木山","activity":""},
+
+  {"mood":"mountain","area":"中","region":"南投","place":"溪頭","activity":""},
+  {"mood":"mountain","area":"北","region":"新北瑞芳","place":"侯硐貓村","activity":""},
+  {"mood":"mountain","area":"北","region":"宜蘭","place":"武荖坑溪","activity":""},
+  {"mood":"mountain","area":"北","region":"新竹尖石","place":"六號花園","activity":""},
+  {"mood":"mountain","area":"北","region":"新北三峽","place":"禾煦熊空休閒農場","activity":""},
+  {"mood":"mountain","area":"北","region":"新北瑞芳","place":"九份老街","activity":""},
+  {"mood":"mountain","area":"北","region":"臺北士林","place":"坪頂古圳親山步道","activity":""},
+
+  {"mood":"rainy day","area":"北","region":"臺北古亭","place":"e書漫","activity":""},
+
+  {"mood":"vintage","area":"北","region":"臺北台電大樓","place":"酸甘甜二手衣","activity":""},
+  {"mood":"vintage","area":"北","region":"臺北忠孝敦化","place":"Rollin' On","activity":""},
+  {"mood":"vintage","area":"北","region":"臺北圓山","place":"解放之聲","activity":""},
+  {"mood":"vintage","area":"北","region":"臺北東門","place":"兔子洞 B1","activity":""},
+  {"mood":"vintage","area":"北","region":"臺北天母","place":"J R Waterwoods","activity":""}
 ]
