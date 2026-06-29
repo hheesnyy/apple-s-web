@@ -137,3 +137,35 @@ button:hover{
 
     line-height:2;
 }
+.mood-buttons{
+
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+
+    margin-top:25px;
+}
+
+.mood-buttons button{
+
+    padding:12px 18px;
+
+    border:none;
+    border-radius:999px;
+
+    background:rgba(255,255,255,0.85);
+
+    font-size:15px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.mood-buttons button:hover{
+
+    transform:translateY(-3px);
+
+    background:white;
+}
