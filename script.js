@@ -41,4 +41,6 @@ function showMood(mood) {
 
         </div>
         `;
+    console.log(moodDatabase);
+    console.log(filteredData);
 }
