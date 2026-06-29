@@ -1,31 +1,28 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>Apple Mood Map</title>
-</head>
-
 <body>
 
-    <h1>Where u up to?</h1>
+    <div class="container">
 
-    <select id="mood">
+        <h1>Where u up to?</h1>
 
-        <option>海</option>
-        <option>山</option>
-        <option>city walk</option>
-        <option>solo trip</option>
+        <p>pick today's mood</p>
 
-    </select>
+        <select id="mood">
 
-    <button onclick="showMood()">
-        Find My Vibe
-    </button>
+            <option>海</option>
+            <option>山</option>
+            <option>city walk</option>
+            <option>solo trip</option>
 
-    <div id="result"></div>
+        </select>
+
+        <button onclick="showMood()">
+            Find My Vibe
+        </button>
+
+        <div id="result"></div>
+
+    </div>
 
     <script src="script.js"></script>
 
 </body>
-
-</html>
