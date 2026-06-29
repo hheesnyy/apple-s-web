@@ -28,19 +28,19 @@ function showMood(mood) {
     let recommendation =
         filteredData[randomIndex];
 
-    result.innerHTML =
+  result.innerHTML = `
 
-        `
-        <div class="result-card">
+<div class="result-card">
 
-            <p>📍 ${recommendation.place}</p>
+    <h2>${recommendation.place}</h2>
 
-            <p>🚶 ${recommendation.activity}</p>
+    <p>📍 ${recommendation.region}</p>
 
-            <p>🎵 ${recommendation.song}</p>
+    <p>🚶 ${recommendation.activity || "explore freely"}</p>
 
-        </div>
-        `;
+</div>
+
+`;
     console.log(moodDatabase);
     console.log(filteredData);
 }
