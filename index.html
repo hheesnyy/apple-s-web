@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>Apple's Archive</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -8,28 +9,22 @@
 <body>
 
 <header>
-    <div class="brand">
-        <p>PERSONAL ARCHIVE · EST. 2026</p>
+    <div class="top">
         <h1>Apple's Archive</h1>
-        <h2>The world, as I remember it.</h2>
+        <p>The world, as I remember it.</p>
     </div>
 
     <nav>
         <button onclick="filterMood('all')">ALL</button>
-
-<button onclick="filterMood('海')">OCEAN</button>
-
-<button onclick="filterMood('山')">MOUNTAIN</button>
-
-<button onclick="filterMood('coffee date')">COFFEE</button>
-
-<button onclick="filterMood('nights')">NIGHTS</button>
-
-<button onclick="filterMood('solo trip')">SOLO TRIP</button>
-
-<button onclick="filterMood('city walk')">CITY WALK</button>
-
-<button onclick="filterMood('vintage')">VINTAGE</button>
+        <button onclick="filterMood('beach')">OCEAN</button>
+        <button onclick="filterMood('mountain')">MOUNTAIN</button>
+        <button onclick="filterMood('coffee date')">COFFEE DATE</button>
+        <button onclick="filterMood('nights')">NIGHTS</button>
+        <button onclick="filterMood('solo trip')">SOLO TRIP</button>
+        <button onclick="filterMood('city walk')">CITY WALK</button>
+        <button onclick="filterMood('vintage')">VINTAGE</button>
+        <button onclick="filterMood('rainy days')">RAINY DAY</button>
+        <button onclick="filterMood('picnic')">PICNIC</button>
     </nav>
 </header>
 
@@ -39,18 +34,16 @@
     <aside id="detailPanel" class="detail-panel">
         <button class="close" onclick="closeDetail()">×</button>
 
-        <img id="detailImage" src="" alt="memory photo">
+        <img id="detailImage" src="background.jpeg">
 
-        <p id="detailMood" class="detail-mood"></p>
-        <h3 id="detailPlace"></h3>
+        <p id="detailMood"></p>
+        <h2 id="detailPlace"></h2>
         <p id="detailRegion"></p>
-
-        <blockquote id="detailCaption"></blockquote>
-
+        <p id="detailActivity"></p>
         <p id="detailSong"></p>
-        <p id="detailNearby"></p>
 
         <a id="detailMap" href="#" target="_blank">Open in Maps →</a>
+        <a id="detailThread" href="#" target="_blank">Threads →</a>
     </aside>
 </main>
 
