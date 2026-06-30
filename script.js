@@ -1,46 +1,68 @@
-let moodDatabase = [];
+let memories = [];
 
 fetch("moods.json")
     .then(response => response.json())
     .then(data => {
-
-        moodDatabase = data;
-
-        console.log("Database Loaded");
-
+        memories = data;
+        renderGallery(memories);
     });
 
-function showMood(mood) {
+function renderGallery(data){
+    const gallery = document.getElementById("gallery");
 
-    let result =
-        document.getElementById("result");
+    gallery.innerHTML = "";
 
-    let filteredData =
-        moodDatabase.filter(
-            item => item.mood === mood
-        );
+    data.forEach(item => {
+        const card = document.createElement("div");
+        card.className = "card";
 
-    let randomIndex =
-        Math.floor(
-            Math.random() * filteredData.length
-        );
+        card.innerHTML = `
+            <img src="${item.image || 'background.jpeg'}">
 
-    let recommendation =
-        filteredData[randomIndex];
+            <div class="card-content">
+                <p class="caption">${item.caption || "a little moment I wanted to remember."}</p>
+                <h3>${item.place}</h3>
+                <p>📍 ${item.region || ""}</p>
+                <p>🎵 ${item.song || "your choice"}</p>
+            </div>
+        `;
 
-  result.innerHTML = `
+        card.onclick = () => openDetail(item);
 
-<div class="result-card">
+        gallery.appendChild(card);
+    });
+}
 
-    <h2>${recommendation.place}</h2>
+function filterMood(mood){
+    if(mood === "all"){
+        renderGallery(memories);
+    } else {
+        const filtered = memories.filter(item => item.mood === mood);
+        renderGallery(filtered);
+    }
+}
 
-    <p>📍 ${recommendation.region}</p>
+function openDetail(item){
+    document.getElementById("detailPanel").classList.add("show");
 
-    <p>🚶 ${recommendation.activity || "explore freely"}</p>
+    document.getElementById("detailImage").src = item.image || "background.jpeg";
+    document.getElementById("detailMood").innerText = item.mood;
+    document.getElementById("detailPlace").innerText = item.place;
+    document.getElementById("detailRegion").innerText = "📍 " + (item.region || "");
+    document.getElementById("detailCaption").innerText = item.caption || "a little moment I wanted to remember.";
+    document.getElementById("detailSong").innerText = "🎵 " + (item.song || "your choice");
+    document.getElementById("detailNearby").innerText = "☕ " + (item.nearby || "nearby cafe");
 
-</div>
+    const map = document.getElementById("detailMap");
 
-`;
-    console.log(moodDatabase);
-    console.log(filteredData);
+    if(item.maps){
+        map.href = item.maps;
+        map.style.display = "block";
+    } else {
+        map.style.display = "none";
+    }
+}
+
+function closeDetail(){
+    document.getElementById("detailPanel").classList.remove("show");
 }
