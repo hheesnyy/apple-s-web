@@ -17,9 +17,7 @@ function renderGallery(data){
         const card = document.createElement("div");
         card.className = "card";
 
-        const imagePath = item.image
-            ? `images/${item.image}`
-            : "background.jpeg";
+        const imagePath = item.image || "background.jpeg";
 
         card.innerHTML = `
             <img src="${imagePath}">
@@ -62,9 +60,7 @@ function openDetail(item){
     const panel = document.getElementById("detailPanel");
     panel.classList.add("show");
 
-    const imagePath = item.image
-        ? `images/${item.image}`
-        : "background.jpeg";
+   const imagePath = item.image || "background.jpeg";
 
     document.getElementById("detailImage").src = imagePath;
     document.getElementById("detailMood").innerText = item.mood;
