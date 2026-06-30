@@ -1,68 +1,52 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-
-    <title>Apple Mood Map</title>
-
+    <title>Apple's Archive</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
-    <div class="container">
-
-        <h1>Where u up to?</h1>
-        
-        <p>pick today's mood</p>
-
-     <div class="mood-buttons">
-
-    <button onclick="showMood('ocean')">
-        🌊 Ocean
-    </button>
-
-    <button onclick="showMood('mountain')">
-        ⛰ Mountain
-    </button>
-
-    <button onclick="showMood('rainy day')">
-        🌧 Rainy Day
-    </button>
-
-    <button onclick="showMood('picnic')">
-        🧺 Picnic
-    </button>
-
-    <button onclick="showMood('city walk')">
-        🚶 City Walk
-    </button>
-
-    <button onclick="showMood('coffee date')">
-        ☕ Coffee Date
-    </button>
-
-    <button onclick="showMood('nights')">
-        🌙 Nights
-    </button>
-
-    <button onclick="showMood('solo trip')">
-        🎒 Solo Trip
-    </button>
-
-    <button onclick="showMood('vintage')">
-        👕 Vintage
-    </button>
-
-</div>
-
-        <div id="result"></div>
-
+<header>
+    <div class="brand">
+        <p>PERSONAL ARCHIVE · EST. 2026</p>
+        <h1>Apple's Archive</h1>
+        <h2>The world, as I remember it.</h2>
     </div>
 
-    <script src="script.js"></script>
+    <nav>
+        <button onclick="filterMood('all')">ALL</button>
+        <button onclick="filterMood('ocean')">OCEAN</button>
+        <button onclick="filterMood('coffee date')">COFFEE</button>
+        <button onclick="filterMood('nights')">NIGHTS</button>
+        <button onclick="filterMood('solo trip')">SOLO TRIP</button>
+        <button onclick="filterMood('vintage')">VINTAGE</button>
+        <button onclick="filterMood('city walk')">CITY WALK</button>
+    </nav>
+</header>
+
+<main>
+    <section id="gallery" class="gallery"></section>
+
+    <aside id="detailPanel" class="detail-panel">
+        <button class="close" onclick="closeDetail()">×</button>
+
+        <img id="detailImage" src="" alt="memory photo">
+
+        <p id="detailMood" class="detail-mood"></p>
+        <h3 id="detailPlace"></h3>
+        <p id="detailRegion"></p>
+
+        <blockquote id="detailCaption"></blockquote>
+
+        <p id="detailSong"></p>
+        <p id="detailNearby"></p>
+
+        <a id="detailMap" href="#" target="_blank">Open in Maps →</a>
+    </aside>
+</main>
+
+<script src="script.js"></script>
 
 </body>
-
 </html>
