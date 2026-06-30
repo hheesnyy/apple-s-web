@@ -8,22 +8,32 @@ fetch("moods.json")
     });
 
 function renderGallery(data){
-    const gallery = document.getElementById("gallery");
 
+    const gallery = document.getElementById("gallery");
     gallery.innerHTML = "";
 
     data.forEach(item => {
+
         const card = document.createElement("div");
         card.className = "card";
 
+        const imagePath = item.image
+            ? `images/${item.image}`
+            : "background.jpeg";
+
         card.innerHTML = `
-            <img src="${item.image || 'background.jpeg'}">
+            <img src="${imagePath}">
 
             <div class="card-content">
-                <p class="caption">${item.caption || "a little moment I wanted to remember."}</p>
+                <p class="caption">
+                    ${item.caption || "a little moment I wanted to remember."}
+                </p>
+
                 <h3>${item.place}</h3>
+
                 <p>📍 ${item.region || ""}</p>
-                <p>🎵 ${item.song || "your choice"}</p>
+
+                <p>✦ ${item.mood}</p>
             </div>
         `;
 
@@ -34,32 +44,50 @@ function renderGallery(data){
 }
 
 function filterMood(mood){
+
     if(mood === "all"){
         renderGallery(memories);
-    } else {
-        const filtered = memories.filter(item => item.mood === mood);
-        renderGallery(filtered);
+        return;
     }
+
+    const filtered = memories.filter(
+        item => item.mood === mood
+    );
+
+    renderGallery(filtered);
 }
 
 function openDetail(item){
-    document.getElementById("detailPanel").classList.add("show");
 
-    document.getElementById("detailImage").src = item.image || "background.jpeg";
+    const panel = document.getElementById("detailPanel");
+    panel.classList.add("show");
+
+    const imagePath = item.image
+        ? `images/${item.image}`
+        : "background.jpeg";
+
+    document.getElementById("detailImage").src = imagePath;
     document.getElementById("detailMood").innerText = item.mood;
     document.getElementById("detailPlace").innerText = item.place;
     document.getElementById("detailRegion").innerText = "📍 " + (item.region || "");
-    document.getElementById("detailCaption").innerText = item.caption || "a little moment I wanted to remember.";
-    document.getElementById("detailSong").innerText = "🎵 " + (item.song || "your choice");
-    document.getElementById("detailNearby").innerText = "☕ " + (item.nearby || "nearby cafe");
+    document.getElementById("detailActivity").innerText = item.activity || "a little moment I wanted to remember.";
+    document.getElementById("detailSong").innerText = item.song ? "🎵 " + item.song : "";
 
     const map = document.getElementById("detailMap");
+    const thread = document.getElementById("detailThread");
 
     if(item.maps){
         map.href = item.maps;
         map.style.display = "block";
-    } else {
+    }else{
         map.style.display = "none";
+    }
+
+    if(item.threads){
+        thread.href = item.threads;
+        thread.style.display = "block";
+    }else{
+        thread.style.display = "none";
     }
 }
 
